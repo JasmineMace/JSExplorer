@@ -59,3 +59,8 @@ function sum(array) {
 console.log(sum(range(1, 10)));
 
 console.log(range(10, 3, -1))
+
+module.exports = {
+    range,
+    sum
+}
