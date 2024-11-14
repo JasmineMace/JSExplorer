@@ -56,11 +56,38 @@ function sum(array) {
     return total;
 }
 
-console.log(sum(range(1, 10)));
+// console.log(sum(range(1, 10)));
 
-console.log(range(10, 3, -1))
+// console.log(range(10, 3, -1))
+
+
+// 2.Reverse array
+function reverseArray(array) {
+    let newarray = [];
+    for (let element of array) {
+        newarray.unshift(element);
+    }
+    return newarray;
+}
+
+
+function reverseArrayInPlace(array) {
+    let left = 0;
+    let right = array.length - 1;
+    while (left < right) {
+        [array[left], array[right]] = [array[right], array[left]]; 
+        left++;
+        right--;
+    };
+    return array;
+};
+
+// console.log(reverseArrayInPlace([1, 3 ,4]))
+
 
 module.exports = {
     range,
-    sum
+    sum,
+    reverseArray,
+    reverseArrayInPlace,
 }
